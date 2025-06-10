@@ -5,9 +5,10 @@ function counter() {
     const [count, setCount] = React.useState(0);
   return (
     <div className="counter">
-        <p id='para'>You Have Clicked {count} Times</p>
-        <button id='btn' onClick={()=>{ setCount(count+1)}} >Click Me</button>
-        
+        <p id='para' style={{fontWeight:"600"}}>You Have Clicked {count} Times</p>
+        <button id='btn' onClick={()=>{ setCount(count+1)}} >➕</button>
+        <button id='btn' onClick={()=>{setCount(count-1)}}>➖</button>
+        <button id='btn' onClick={()=>{setCount(0)}}>🔁</button>
     </div>
   )
 }
